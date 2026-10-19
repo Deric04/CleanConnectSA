@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find and book cleaning services for homes, apartments, businesses and student accommodation with CleanConnect SA.">
+    <title>CleanConnect SA | Reliable Cleaning for Every Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="logo" href="#home">CleanConnect SA</a>
+
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#cleaners">Find Cleaners</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#reviews">Reviews</a>
+                <a class="button" href="#booking">Book a Cleaner</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="hero" id="home">
+            <p><strong>YOUR SPACE. OUR CARE.</strong></p>
+
+            <h1>Reliable Cleaning for Every Space</h1>
+
+            <p>
+                Find trusted cleaning professionals for your home, apartment,
+                business or student accommodation. Compare services, check
+                ratings and book with confidence.
+            </p>
+
+            <a class="button" href="#cleaners">Find a Cleaner</a>
+            <a class="button button-secondary" href="#services">Explore Services</a>
+        </section>
+
+        <section class="section" id="services">
+            <div class="section-heading">
+                <h2>Cleaning for Your Needs</h2>
+                <p>Choose the type of space you need cleaned.</p>
+            </div>
+
+            <div class="category-grid">
+
+                <a class="category-card" href="#booking">
+                    <h3>🏠 Home Cleaning</h3>
+                    <p>Keep your home fresh, tidy and comfortable.</p>
+                    <strong>Explore home cleaning →</strong>
+                </a>
+
+                <a class="category-card" href="#booking">
+                    <h3>🏢 Apartment Cleaning</h3>
+                    <p>Cleaning for flats, apartments and shared living spaces.</p>
+                    <strong>Explore apartment cleaning →</strong>
+                </a>
+
+                <a class="category-card" href="#booking">
+                    <h3>🏬 Business Cleaning</h3>
+                    <p>Professional cleaning for offices and commercial spaces.</p>
+                    <strong>Explore business cleaning →</strong>
+                </a>
+
+                <a class="category-card" href="#booking">
+                    <h3>🎓 Student Accommodation</h3>
+                    <p>Affordable options for residences, digs and student rooms.</p>
+                    <strong>Explore student cleaning →</strong>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="section" id="cleaners">
+            <div class="section-heading">
+                <h2>Find Your Cleaning Professional</h2>
+                <p>Search available services and compare your options.</p>
+            </div>
+
+            <form class="search-panel" id="search-form">
+                <div class="form-grid">
+
+                    <div>
+                        <label for="location">Suburb or area</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="e.g. Pretoria, Montana"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="service-type">Type of cleaning</label>
+                        <select id="service-type" name="service-type">
+                            <option value="">All cleaning services</option>
+                            <option value="home">Home cleaning</option>
+                            <option value="apartment">Apartment cleaning</option>
+                            <option value="business">Business cleaning</option>
+                            <option value="student">Student accommodation</option>
+                            <option value="deep">Deep cleaning</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="max-price">Maximum budget (R)</label>
+                        <select id="max-price" name="max-price">
+                            <option value="">Any budget</option>
+                            <option value="250">R250</option>
+                            <option value="400">R400</option>
+                            <option value="600">R600</option>
+                            <option value="1000">R1 000</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <p>
+                    <button class="button" type="submit">Search Cleaners</button>
+                </p>
+
+                <p id="search-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="cleaner-grid">
+
+                <article class="cleaner-card">
+                    <span class="verified">✓ Sample verified profile</span>
+                    <h3>FreshSpace Cleaning</h3>
+                    <p class="rating">★ 4.8/5 · Sample rating</p>
+                    <p>Home and apartment cleaning</p>
+                    <p class="price">From R250</p>
+                    <button class="button" type="button" data-cleaner="FreshSpace Cleaning">
+                        View Details
+                    </button>
+                </article>
+
+                <article class="cleaner-card">
+                    <span class="verified">✓ Sample verified profile</span>
+                    <h3>BrightOffice Services</h3>
+                    <p class="rating">★ 4.7/5 · Sample rating</p>
+                    <p>Office and business cleaning</p>
+                    <p class="price">From R400</p>
+                    <button class="button" type="button" data-cleaner="BrightOffice Services">
+                        View Details
+                    </button>
+                </article>
+
+                <article class="cleaner-card">
+                    <span class="verified">✓ Sample verified profile</span>
+                    <h3>Everyday Cleaning Co.</h3>
+                    <p class="rating">★ 4.9/5 · Sample rating</p>
+                    <p>Student rooms and shared accommodation</p>
+                    <p class="price">From R200</p>
+                    <button class="button" type="button" data-cleaner="Everyday Cleaning Co.">
+                        View Details
+                    </button>
+                </article>
+
+            </div>
+
+            <p id="cleaner-details" class="notice" role="status" aria-live="polite" hidden></p>
+        </section>
+
+        <section class="section" id="how-it-works">
+            <div class="section-heading">
+                <h2>How CleanConnect SA Works</h2>
+                <p>Three simple steps to a cleaner space.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>1. Find</h3>
+                    <p>Search for cleaning services that suit your needs and budget.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>2. Compare</h3>
+                    <p>Review sample profiles, service descriptions and ratings.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>3. Book</h3>
+                    <p>Choose a date and time, submit your request and receive confirmation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="booking">
+            <div class="section-heading">
+                <h2>Request a Cleaning Service</h2>
+                <p>Complete the form to try the booking process.</p>
+            </div>
+
+            <form class="search-panel" id="booking-form">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="customer-name">Your name</label>
+                        <input id="customer-name" name="customer-name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div>
+                        <label for="customer-email">Email address</label>
+                        <input id="customer-email" name="customer-email"
+                               type="email" autocomplete="email" required>
+                    </div>
+
+                    <div>
+                        <label for="booking-service">Space to be cleaned</label>
+                        <select id="booking-service" name="booking-service" required>
+                            <option value="">Select a service</option>
+                            <option value="Home">Home</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Business">Business</option>
+                            <option value="Student accommodation">Student accommodation</option>
+                            <option value="Deep cleaning">Deep cleaning</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="booking-date">Preferred date</label>
+                        <input id="booking-date" name="booking-date"
+                               type="date" required>
+                    </div>
+
+                    <div>
+                        <label for="booking-time">Preferred time</label>
+                        <select id="booking-time" name="booking-time" required>
+                            <option value="">Select a time</option>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="booking-location">Service address or area</label>
+                        <input id="booking-location" name="booking-location"
+                               autocomplete="street-address" required>
+                    </div>
+
+                </div>
+
+                <p>
+                    <label for="booking-notes">Additional instructions (optional)</label>
+                    <textarea id="booking-notes" name="booking-notes"
+                              rows="3" placeholder="Describe any special requirements."></textarea>
+                </p>
+
+                <button class="button" type="submit">Submit Booking Request</button>
+
+                <p id="booking-message" role="status" aria-live="polite"></p>
+
+                <p>
+                    <small>
+                        Prototype demonstration only. No real booking or payment
+                        will be processed.
+                    </small>
+                </p>
+
+            </form>
+        </section>
+
+        <section class="section" id="reviews">
+            <div class="section-heading">
+                <h2>Built on Trust</h2>
+                <p>Reviews help customers make informed decisions.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Verified Profiles</h3>
+                    <p>Profile verification should help customers assess service providers before booking.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Customer Reviews</h3>
+                    <p>Ratings and written reviews can help customers compare their options.</p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Clear Pricing</h3>
+                    <p>Upfront service prices help customers choose within their budget.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>CleanConnect SA</strong> — Reliable Cleaning. Every Space.</p>
+        <p>Connecting homes, apartments, businesses and students with cleaning services.</p>
+        <p><a href="#home">Back to top</a></p>
+        <p><small>Academic prototype using demonstration data.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
