@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find and book cleaning services for homes, apartments, businesses and student accommodation with CleanConnect SA.">
+    <meta name="theme-color" content="#fff8f5">
     <title>CleanConnect SA | Reliable Cleaning for Every Space</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
         <nav aria-label="Main navigation">
@@ -26,19 +27,16 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
 
         <section class="hero" id="home">
             <p><strong>YOUR SPACE. OUR CARE.</strong></p>
-
             <h1>Reliable Cleaning for Every Space</h1>
-
             <p>
-                Find trusted cleaning professionals for your home, apartment,
-                business or student accommodation. Compare services, check
-                ratings and book with confidence.
+                Find cleaning professionals for your home, apartment,
+                business or student accommodation. Compare demonstration
+                profiles and explore the booking process.
             </p>
-
             <a class="button" href="#cleaners">Find a Cleaner</a>
             <a class="button button-secondary" href="#services">Explore Services</a>
         </section>
@@ -50,7 +48,6 @@
             </div>
 
             <div class="category-grid">
-
                 <a class="category-card" href="#booking">
                     <h3>🏠 Home Cleaning</h3>
                     <p>Keep your home fresh, tidy and comfortable.</p>
@@ -65,7 +62,7 @@
 
                 <a class="category-card" href="#booking">
                     <h3>🏬 Business Cleaning</h3>
-                    <p>Professional cleaning for offices and commercial spaces.</p>
+                    <p>Cleaning for offices and commercial spaces.</p>
                     <strong>Explore business cleaning →</strong>
                 </a>
 
@@ -74,27 +71,31 @@
                     <p>Affordable options for residences, digs and student rooms.</p>
                     <strong>Explore student cleaning →</strong>
                 </a>
-
             </div>
         </section>
 
         <section class="section" id="cleaners">
             <div class="section-heading">
                 <h2>Find Your Cleaning Professional</h2>
-                <p>Search available services and compare your options.</p>
+                <p>Search demonstration services and compare your options.</p>
+            </div>
+
+            <div class="notice demo-disclaimer">
+                <strong>Important demonstration notice:</strong>
+                CleanConnect SA is an academic prototype. All eight cleaner
+                profiles, prices, ratings and verification labels are fictional.
+                No genuine customer reviews, background checks or service-provider
+                verification have been conducted. No real cleaning bookings
+                are available through this website.
             </div>
 
             <form class="search-panel" id="search-form">
                 <div class="form-grid">
-
                     <div>
                         <label for="location">Suburb or area</label>
-                        <input
-                            type="text"
-                            id="location"
-                            name="location"
-                            placeholder="e.g. Pretoria, Montana"
-                        >
+                        <input type="text" id="location" name="location"
+                            placeholder="e.g. Pretoria, Sandton, Centurion"
+                            aria-describedby="search-message">
                     </div>
 
                     <div>
@@ -119,76 +120,158 @@
                             <option value="1000">R1 000</option>
                         </select>
                     </div>
-
                 </div>
 
                 <p>
                     <button class="button" type="submit">Search Cleaners</button>
+                    <button class="button button-secondary" type="reset">
+                        Clear Filters
+                    </button>
                 </p>
 
                 <p id="search-message" role="status" aria-live="polite"></p>
             </form>
 
-            <div class="cleaner-grid">
+            <div class="cleaner-grid" id="cleaner-results">
 
-                <article class="cleaner-card">
-                    <span class="verified">✓ Sample verified profile</span>
+                <article class="cleaner-card"
+                    data-location="pretoria centurion montana"
+                    data-service="home apartment deep"
+                    data-price="250">
+                    <span class="verified">Demo profile – not verified</span>
                     <h3>FreshSpace Cleaning</h3>
                     <p class="rating">★ 4.8/5 · Sample rating</p>
                     <p>Home and apartment cleaning</p>
+                    <p><strong>Areas served:</strong> Pretoria, Centurion and Montana</p>
                     <p class="price">From R250</p>
-                    <button class="button" type="button" data-cleaner="FreshSpace Cleaning">
-                        View Details
-                    </button>
+                    <button class="button" type="button"
+                        data-cleaner="FreshSpace Cleaning">View Details</button>
                 </article>
 
-                <article class="cleaner-card">
-                    <span class="verified">✓ Sample verified profile</span>
+                <article class="cleaner-card"
+                    data-location="midrand pretoria"
+                    data-service="business deep"
+                    data-price="400">
+                    <span class="verified">Demo profile – not verified</span>
                     <h3>BrightOffice Services</h3>
                     <p class="rating">★ 4.7/5 · Sample rating</p>
                     <p>Office and business cleaning</p>
+                    <p><strong>Areas served:</strong> Midrand and Pretoria</p>
                     <p class="price">From R400</p>
-                    <button class="button" type="button" data-cleaner="BrightOffice Services">
-                        View Details
-                    </button>
+                    <button class="button" type="button"
+                        data-cleaner="BrightOffice Services">View Details</button>
                 </article>
 
-                <article class="cleaner-card">
-                    <span class="verified">✓ Sample verified profile</span>
+                <article class="cleaner-card"
+                    data-location="hatfield pretoria"
+                    data-service="student home apartment"
+                    data-price="200">
+                    <span class="verified">Demo profile – not verified</span>
                     <h3>Everyday Cleaning Co.</h3>
                     <p class="rating">★ 4.9/5 · Sample rating</p>
                     <p>Student rooms and shared accommodation</p>
+                    <p><strong>Areas served:</strong> Hatfield and Pretoria</p>
                     <p class="price">From R200</p>
-                    <button class="button" type="button" data-cleaner="Everyday Cleaning Co.">
-                        View Details
-                    </button>
+                    <button class="button" type="button"
+                        data-cleaner="Everyday Cleaning Co.">View Details</button>
+                </article>
+
+                <article class="cleaner-card"
+                    data-location="sandton johannesburg"
+                    data-service="home apartment deep"
+                    data-price="300">
+                    <span class="verified">Demo profile – not verified</span>
+                    <h3>Sparkle Home Care</h3>
+                    <p class="rating">★ 4.8/5 · Sample rating</p>
+                    <p>Home, apartment and deep cleaning</p>
+                    <p><strong>Areas served:</strong> Sandton and Johannesburg</p>
+                    <p class="price">From R300</p>
+                    <button class="button" type="button"
+                        data-cleaner="Sparkle Home Care">View Details</button>
+                </article>
+
+                <article class="cleaner-card"
+                    data-location="randburg roodepoort johannesburg"
+                    data-service="home apartment"
+                    data-price="280">
+                    <span class="verified">Demo profile – not verified</span>
+                    <h3>PureSpace Cleaners</h3>
+                    <p class="rating">★ 4.6/5 · Sample rating</p>
+                    <p>Home and apartment cleaning</p>
+                    <p><strong>Areas served:</strong> Randburg, Roodepoort and Johannesburg</p>
+                    <p class="price">From R280</p>
+                    <button class="button" type="button"
+                        data-cleaner="PureSpace Cleaners">View Details</button>
+                </article>
+
+                <article class="cleaner-card"
+                    data-location="centurion midrand"
+                    data-service="business deep"
+                    data-price="350">
+                    <span class="verified">Demo profile – not verified</span>
+                    <h3>GreenBroom Services</h3>
+                    <p class="rating">★ 4.7/5 · Sample rating</p>
+                    <p>Business and deep cleaning</p>
+                    <p><strong>Areas served:</strong> Centurion and Midrand</p>
+                    <p class="price">From R350</p>
+                    <button class="button" type="button"
+                        data-cleaner="GreenBroom Services">View Details</button>
+                </article>
+
+                <article class="cleaner-card"
+                    data-location="johannesburg soweto"
+                    data-service="student home apartment"
+                    data-price="220">
+                    <span class="verified">Demo profile – not verified</span>
+                    <h3>NeatNest Cleaning</h3>
+                    <p class="rating">★ 4.8/5 · Sample rating</p>
+                    <p>Student accommodation and home cleaning</p>
+                    <p><strong>Areas served:</strong> Johannesburg and Soweto</p>
+                    <p class="price">From R220</p>
+                    <button class="button" type="button"
+                        data-cleaner="NeatNest Cleaning">View Details</button>
+                </article>
+
+                <article class="cleaner-card"
+                    data-location="pretoria east menlyn pretoria"
+                    data-service="home apartment deep"
+                    data-price="320">
+                    <span class="verified">Demo profile – not verified</span>
+                    <h3>Pristine Spaces</h3>
+                    <p class="rating">★ 4.9/5 · Sample rating</p>
+                    <p>Home, apartment and deep cleaning</p>
+                    <p><strong>Areas served:</strong> Pretoria East and Menlyn</p>
+                    <p class="price">From R320</p>
+                    <button class="button" type="button"
+                        data-cleaner="Pristine Spaces">View Details</button>
                 </article>
 
             </div>
 
-            <p id="cleaner-details" class="notice" role="status" aria-live="polite" hidden></p>
+            <p id="cleaner-details" class="notice"
+                role="status" aria-live="polite" hidden></p>
         </section>
 
         <section class="section" id="how-it-works">
             <div class="section-heading">
                 <h2>How CleanConnect SA Works</h2>
-                <p>Three simple steps to a cleaner space.</p>
+                <p>Three simple steps to explore the booking process.</p>
             </div>
 
             <div class="feature-grid">
                 <article class="feature-card">
                     <h3>1. Find</h3>
-                    <p>Search for cleaning services that suit your needs and budget.</p>
+                    <p>Search demonstration cleaning profiles by location and budget.</p>
                 </article>
 
                 <article class="feature-card">
                     <h3>2. Compare</h3>
-                    <p>Review sample profiles, service descriptions and ratings.</p>
+                    <p>Explore fictional profiles, sample ratings and service descriptions.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>3. Book</h3>
-                    <p>Choose a date and time, submit your request and receive confirmation.</p>
+                    <h3>3. Request</h3>
+                    <p>Select a preferred service and date to try the sample booking form.</p>
                 </article>
             </div>
         </section>
@@ -196,23 +279,21 @@
         <section class="section" id="booking">
             <div class="section-heading">
                 <h2>Request a Cleaning Service</h2>
-                <p>Complete the form to try the booking process.</p>
+                <p>Complete the form to try the demonstration booking process.</p>
             </div>
 
             <form class="search-panel" id="booking-form">
-
                 <div class="form-grid">
-
                     <div>
                         <label for="customer-name">Your name</label>
                         <input id="customer-name" name="customer-name"
-                               autocomplete="name" required>
+                            autocomplete="name" required>
                     </div>
 
                     <div>
                         <label for="customer-email">Email address</label>
                         <input id="customer-email" name="customer-email"
-                               type="email" autocomplete="email" required>
+                            type="email" autocomplete="email" required>
                     </div>
 
                     <div>
@@ -230,7 +311,7 @@
                     <div>
                         <label for="booking-date">Preferred date</label>
                         <input id="booking-date" name="booking-date"
-                               type="date" required>
+                            type="date" required>
                     </div>
 
                     <div>
@@ -245,51 +326,53 @@
                     <div>
                         <label for="booking-location">Service address or area</label>
                         <input id="booking-location" name="booking-location"
-                               autocomplete="street-address" required>
+                            autocomplete="street-address" required>
                     </div>
-
                 </div>
 
                 <p>
                     <label for="booking-notes">Additional instructions (optional)</label>
                     <textarea id="booking-notes" name="booking-notes"
-                              rows="3" placeholder="Describe any special requirements."></textarea>
+                        rows="3" placeholder="Describe any special requirements."></textarea>
                 </p>
 
-                <button class="button" type="submit">Submit Booking Request</button>
+                <button class="button" type="submit">
+                    Submit Booking Request
+                </button>
 
                 <p id="booking-message" role="status" aria-live="polite"></p>
 
-                <p>
-                    <small>
-                        Prototype demonstration only. No real booking or payment
-                        will be processed.
-                    </small>
-                </p>
-
+                <p><small>
+                    Academic prototype only. No real booking is submitted,
+                    no cleaner is contacted and no payment is processed.
+                </small></p>
             </form>
         </section>
 
         <section class="section" id="reviews">
             <div class="section-heading">
-                <h2>Built on Trust</h2>
-                <p>Reviews help customers make informed decisions.</p>
+                <h2>Trust and Transparency</h2>
+                <p>
+                    This prototype demonstrates how customer reviews,
+                    provider verification and transparent pricing could work.
+                    No genuine reviews or verification results are displayed.
+                </p>
             </div>
 
             <div class="feature-grid">
                 <article class="feature-card">
-                    <h3>Verified Profiles</h3>
-                    <p>Profile verification should help customers assess service providers before booking.</p>
+                    <h3>Provider Verification</h3>
+                    <p>Real verification processes could help customers assess service providers before booking.</p>
                 </article>
 
                 <article class="feature-card">
                     <h3>Customer Reviews</h3>
-                    <p>Ratings and written reviews can help customers compare their options.</p>
+                    <p>Genuine customer feedback could help customers compare cleaning services.</p>
                 </article>
 
                 <article class="feature-card">
                     <h3>Clear Pricing</h3>
-                    <p>Upfront service prices help customers choose within their budget.</p>
+                    <p>Transparent service prices could help customers choose within their budget.</p>
                 </article>
             </div>
         </section>
@@ -300,7 +383,7 @@
         <p><strong>CleanConnect SA</strong> — Reliable Cleaning. Every Space.</p>
         <p>Connecting homes, apartments, businesses and students with cleaning services.</p>
         <p><a href="#home">Back to top</a></p>
-        <p><small>Academic prototype using demonstration data.</small></p>
+        <p><small>Academic prototype using fictional demonstration data.</small></p>
     </footer>
 
     <script src="script.js"></script>
