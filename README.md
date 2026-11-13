@@ -38,7 +38,7 @@ The website contains eight fictional cleaning service provider profiles.
 
 Each profile includes demonstration information such as:
 
-- Cleaner or business name.
+- Cleaner or business names.
 - Fictional contact person's full name.
 - Demonstration profile reference.
 - Placeholder contact number and email address.
